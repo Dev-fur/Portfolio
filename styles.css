@@ -1,0 +1,123 @@
+/* Add this to your CSS */
+
+.bytesized-regular {
+    font-family: "Bytesized", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem
+  }
+
+  .color-way{
+    color: whitesmoke;
+  }
+
+  .back{
+
+    background-color: grey;
+  }
+
+  .nav-text{
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: burlywood;
+  }
+  
+  .positionn-index{
+    position: relative;
+    z-index: 1;
+  }
+#hero {
+    background: black;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  .liquid-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+  }
+  
+  .bouncing-ball {
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%, grey, #f0f0f0);
+    border-radius: 50%;
+    animation: bounce 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    z-index: -1;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translate(-50%, -400%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -20%) scale(0.9);
+    }
+  }
+  
+    
+.caveat-look {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 700px;
+    color: burlywood;
+    size: 600px;
+  }
+
+  
+  /* Liquid surface with ripples */
+  .liquid-container::before,
+  .liquid-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: grey;
+    border-radius: 45%;
+    transform: translate(-50%, 60%);
+    animation: ripple 2s infinite;
+    z-index: -3;
+  }
+  
+  .liquid-container::after {
+    animation-delay: 0.5s;
+    opacity: 0.6;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: translate(-50%, 60%) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, 60%) scale(2.5);
+      opacity: 0;
+    }
+  }
+  
+  
+  .liquid-container {
+    background: linear-gradient(to top, grey, transparent);
+    animation: liquid-wave 4s ease-in-out infinite;
+  }
+  
+  @keyframes liquid-wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
